@@ -1,0 +1,55 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+
+#web-app dependencies
+web-app/node_modules
+
+#web-app profiling files
+web-app/chrome-profiler-events*.json
+web-app/speed-measure-plugin*.json
+
+# compiled output
+web-app/dist
+web-app/tmp
+web-app/out-tsc
+# Only exists if Bazel was run
+web-app/bazel-out
+
+# misc
+web-app/.sass-cache
+web-app/connect.lock
+web-app/coverage
+web-app/libpeerconnection.log
+web-app/npm-debug.log
+web-app/yarn-error.log
+web-app/testem.log
+web-app/typings

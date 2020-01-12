@@ -1,0 +1,53 @@
+app:
+  cors:
+    allowed-origins: '*'
+    allowed-methods: '*'
+    allowed-headers: '*'
+    exposed-headers: 'Authorization,Link,X-Total-Count'
+    allow-credentials: true
+    max-age: 1800
+  security:
+    authentication:
+      jwt:
+        # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
+        base64-secret: MmZhMjdkNzc0N2VmZjgzZmQ3NTI4ODhhNWQ3NmVjNWY2YjY5ZWZiMDcyY2EwYjNjMjRjYTJjYTc1ODg4ZWRjZmU5YzQyNWNiOTJiZjdiZjMwYzE2NmE0ODBmYjg2YzVjY2M3YmE1ODk5ZDBlNjVmYmRkZWJlZWM1NDE3ZWUxMmM=
+        # Token is valid 24 hours
+        token-validity-in-seconds: 86400
+        token-validity-in-seconds-for-remember-me: 2592000
+  mail:
+    enable: true
+    base-url: http://localhost:4200
+    from: admin@localhost
+    
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: spring-angular
+      auto-index-creation: true
+  thymeleaf:
+    mode: HTML
+    reactive:
+      max-chunk-size: 8192
+  messages:
+    basename: i18n/messages
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: quanmd.edu@gmail.com
+    password: Hrehitachi.123
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        smtp:
+          ssl:
+            enable: false
+          auth: true
+          starttls:
+            enable: true
+        debug: true
+    
+        
