@@ -64,7 +64,7 @@ public class WebFluxSecurityConfig {
 	    .and()
 	    .cors().and()
 	        .authorizeExchange()
-	        .pathMatchers("/test/**").permitAll()
+	        .pathMatchers("/**").permitAll()
 	        .pathMatchers("/blog/**").permitAll()
 	        .pathMatchers("/api/register").permitAll()
 	        .pathMatchers("/api/activate").permitAll()
