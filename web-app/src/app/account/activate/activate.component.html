@@ -1,0 +1,18 @@
+<div class="container shadow card" [ngSwitch]="success">
+  <div class="card-body">
+    <div class="justify-content-center">
+      <div>
+        <h1 class="card-title">Account activation</h1>
+        <div class="alert alert-success" *ngIf="success">
+          <span
+            ><strong>Your user account has been activated.</strong> Please
+          </span>
+          <a class="alert-link" (click)="login()">Login</a>.
+        </div>
+        <div class="alert alert-danger" *ngIf="error">
+                <strong>Your user could not be activated.</strong> Please use the registration form to register.
+            </div>
+      </div>
+    </div>
+  </div>
+</div>

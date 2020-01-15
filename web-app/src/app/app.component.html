@@ -1,0 +1,16 @@
+<sa-header
+  [username]="loggedInUser | uppercase"
+  (onClickToggled)="toggled = !toggled"
+></sa-header>
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+  <!-- Sidebar -->
+  <sa-sidebar [toggled]="toggled"></sa-sidebar>
+  <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content">
+      <router-outlet></router-outlet>
+    </div>
+    <sa-footer></sa-footer>
+  </div>
+</div>

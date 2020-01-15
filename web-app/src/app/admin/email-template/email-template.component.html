@@ -1,0 +1,119 @@
+<!-- <div>
+  <nz-page-header>
+    <nz-page-header-title>Email Template List</nz-page-header-title>
+    <nz-page-header-extra>
+      <button
+        nzTooltipTitle="add new"
+        nzTooltipPlacement="top"
+        nz-button
+        nz-tooltip
+        (click)="addTemplate()"
+      >
+        <i class="fa fa-plus" aria-hidden="true"></i>
+      </button>
+    </nz-page-header-extra>
+  </nz-page-header>
+
+  <nz-page-header-content>
+    <nz-table #filterTable [nzData]="listOfDisplayData">
+      <thead (nzSortChange)="sort($event)" nzSingleSort>
+        <tr>
+          <th
+            nzShowSort
+            nzSortKey="key"
+            nzShowFilter
+            [nzFilters]="listOfName"
+            (nzFilterChange)="filter($event, searchAddress)"
+          >
+            Key
+          </th>
+          <th nzShowSort>Description</th>
+          <th nzShowSort>Template</th>
+          <th nzShowSort>Created By</th>
+          <th nzShowSort>Created Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of filterTable.data">
+          <td>{{ data.key }}</td>
+          <td>{{ data.description }}</td>
+          <td>{{ data.template }}</td>
+          <td>{{ data.createdBy }}</td>
+          <td>{{ data.createDate }}</td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </nz-page-header-content>
+</div>
+
+<nz-modal
+  [(nzVisible)]="isAddModel"
+  [nzTitle]="modalTitle"
+  [nzContent]="modalContent"
+  (nzOnCancel)="handleCancel()"
+  (nzOnOk)="submitAddingItem()"
+>
+  <ng-template class="text-center" #modalTitle>
+    Add New Email Template
+  </ng-template>
+  <ng-template #modalContent>
+    <form
+      nz-form
+      [formGroup]="addItemForm"
+      class="login-form"
+      (ngSubmit)="submitAddingItem()"
+    >
+      <nz-form-item>
+        <nz-input-group>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="key"
+            >Template key</nz-form-label
+          >
+          <nz-form-control [nzSm]="14" [nzXs]="24" id="key">
+            <input
+              type="text"
+              nz-input
+              formControlName="key"
+              placeholder="template key"
+              nzErrorTip="Input is required"
+            />
+          </nz-form-control>
+        </nz-input-group>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-input-group>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="template"
+            >Content</nz-form-label
+          >
+          <nz-form-control [nzSm]="14" [nzXs]="24" id="template">
+            <input
+              type="text"
+              nz-input
+              formControlName="template"
+              placeholder="Template content"
+              nzErrorTip="Input is required"
+            />
+          </nz-form-control>
+        </nz-input-group>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-input-group>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="description"
+            >Description</nz-form-label
+          >
+          <nz-form-control [nzSm]="14" [nzXs]="24" id="description">
+            <input
+              type="text"
+              nz-input
+              formControlName="description"
+              placeholder="Description"
+            />
+          </nz-form-control>
+        </nz-input-group>
+      </nz-form-item>
+    </form>
+  </ng-template>
+  <div *nzModalFooter>
+    <button nz-button nzType="primary" (click)="submitAddingItem()" [nzLoading]="isAddLoading">Submit</button>
+    <button nz-button (click)="addCancel()">Cancel</button>
+  </div>
+</nz-modal> -->
